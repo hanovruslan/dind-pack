@@ -1,0 +1,9 @@
+FROM jpetazzo/dind
+
+ARG WORKDIR
+
+ENV WORKDIR ${WORKDIR}
+
+WORKDIR ${WORKDIR}
+
+RUN mkdir -p ${WORKDIR}

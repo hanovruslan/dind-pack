@@ -1,0 +1,22 @@
+require_version: ">= 1.8.0"
+required_plugins: [
+  "vagrant-vbguest",
+]
+host_name: "dind-pack"
+box_name: "devenv/debian-jessie"
+memory: 512
+cpus: 1
+synced_folder:
+  docker:
+    from: "./docker"
+    to: "/usr/share/dind-pack/docker"
+  env:
+    from: "./env"
+    to: "/usr/share/dind-pack/env"
+  run:
+    from: "./run"
+    to: "/usr/share/dind-pack/run"
+#   app:
+#     from: "/path/to/app_name/project/folder"
+#     to: "/usr/share/app_name"
+#     # mount_options: ["dmode=777,fmode=777"]
