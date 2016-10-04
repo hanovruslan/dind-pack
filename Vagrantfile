@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 require "yaml"
-settings = YAML.load_file "Vagrant.yml"
+settings = YAML.load_file "Vagrant/Vagrant.yml"
 Vagrant.require_version settings["require_version"]
 settings["required_plugins"].each do |plugin|
   system "echo Trying to install #{plugin} ... && vagrant plugin install #{plugin}" unless Vagrant.has_plugin? plugin
