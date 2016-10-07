@@ -2,7 +2,7 @@
 
 ... and all of these inside Vagrant
 
-![Image of Dominick Cobb](./Resources/we-need-to-go-deeper.jpg "Image of Dominick Cobb")
+![We need to go deeper](./resources/img/we-need-to-go-deeper.jpg "We need to go deeper")
 
 ## What can you do ##
 
@@ -15,14 +15,10 @@
 1. commit container
 1. push to the registry
 
-### Scripts ###
+
+## How ##
 
 ```
-./run/run.sh
-```
-
-### Snippets ###
-
-```
-docker exec -ti dind-pack bash
+$ vagrant up --provision && vagrant ssh
+$ /vagrant/docker/build.sh [image-name]
 ```
