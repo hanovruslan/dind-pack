@@ -13,7 +13,7 @@
 function get_options {
   local dict=${@: -1};
   local result;
-  local sep_val=${DIND_OPT_SEP}
+  local sep_val=${DIND_PACK_OPT_SEP}
   local sep_case='|'
   local opt_pat;
   local opt_case=();

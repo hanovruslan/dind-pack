@@ -7,7 +7,7 @@ source ${self_dir}/../src/docker_src.sh
 source ${self_dir}/../src/bash_src.sh
 
 docker_cmd=$(dp_docker_build_cmd ${@})
-if [ ${DIND_DEBUG} = true ]; then
+if [ ${DIND_PACK_DEBUG} = true ]; then
   echo "${docker_cmd}"
 else
   ${docker_cmd}
