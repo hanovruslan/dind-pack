@@ -6,19 +6,16 @@
 
 ## What can you do ##
 
-1. create VM (vagrant up --provision)
-1. create dind container (./docker/build.sh)
+1. create VM
+1. create dind container
 1. mount your app inside dind container
 1. build any available container that match exactly your app
 1. mount your app inside your container
-1. run (dev or prod)
+1. run
 1. commit container
 1. push to the registry
 
 
-## How ##
+## HowTo's ##
 
-```
-$ vagrant up --provision && vagrant ssh
-$ /vagrant/docker/build.sh [image-name]
-```
+[See main doc for details](./resources/doc/main.md)
