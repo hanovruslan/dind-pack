@@ -1,6 +1,6 @@
 # Docker in Docker pack #
 
-... and all of these inside Vagrant
+... and all of these inside Vagrant (works only for root user!)
 
 ![We need to go deeper](./resources/img/we-need-to-go-deeper.jpg "We need to go deeper")
 
