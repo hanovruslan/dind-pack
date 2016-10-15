@@ -15,6 +15,7 @@ Vagrant.configure(2) do |config|
   if settings.key?("synced_folder")
     settings["synced_folder"].each_pair do |key, folder|
       config.vm.synced_folder folder["from"], folder["to"],
+        disabled: folder.key?("disabled") ? folder["disabled"] : false,
         mount_options: folder.key?("mount_options") ? folder["mount_options"] : []
     end
   end
