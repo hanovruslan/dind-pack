@@ -1,4 +1,4 @@
-FROM jpetazzo/dind
+FROM docker:dind
 
 ARG WORKDIR
 

@@ -3,7 +3,7 @@
 function dp_docker_run_cmd {
   local dict;
   local options;
-  local res_fmt='docker run\n%4s-d\n%4s--name %s'
+  local res_fmt='docker run\n%4s--privileged\n%4s-d\n%4s--name %s'
   local res_fmt_vl='\n%4s-v %s:%s'
   local res_fmt_im='\n%4s%s'
 
@@ -27,7 +27,7 @@ function dp_docker_run_cmd {
     eval "declare -A container=${options[container]}"
     container=${container[0]}
   fi
-  res=$(printf $"${res_fmt}" "" "" "${container}")
+  res=$(printf $"${res_fmt}" "" "" "" "${container}")
   if [ -n "${options[volumes]}" ]; then
     eval "declare -A volumes=${options[volumes]}"
     for host in ${!volumes[@]}
